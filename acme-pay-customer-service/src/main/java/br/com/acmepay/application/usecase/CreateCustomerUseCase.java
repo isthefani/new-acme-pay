@@ -13,6 +13,6 @@ public class CreateCustomerUseCase implements ICreateCustomerUseCase {
 
     @Override
     public String execute(CustomerDomain customerDomain) {
-        return customerDomain.create();
+        return customerDomain.create(createCustomer);
     }
 }

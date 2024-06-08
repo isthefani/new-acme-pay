@@ -21,6 +21,6 @@ public class CustomerDomain {
 
     public String create(ICreateCustomer createCustomer) {
         createCustomer.execute(this);
-    }
-    public
+        return null;
+    };
 }
