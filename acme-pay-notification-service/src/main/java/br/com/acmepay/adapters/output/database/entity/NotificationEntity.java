@@ -1,17 +1,26 @@
-package br.com.acmepay.application.domain.model;
+package br.com.acmepay.adapters.output.database.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-@Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class NotificationDomain {
+@Data
+@Entity
+@Table(name = "notifications")
+public class NotificationEntity {
 
+    @Enumerated(EnumType.STRING)
     private Long id;
     private LocalDateTime data_transaction;
     private Integer source_account;

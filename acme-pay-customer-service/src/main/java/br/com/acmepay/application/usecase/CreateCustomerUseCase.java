@@ -9,6 +9,7 @@ import lombok.AllArgsConstructor;
 @UseCase
 @AllArgsConstructor
 public class CreateCustomerUseCase implements ICreateCustomerUseCase {
+
     private final ICreateCustomer createCustomer;
 
     @Override

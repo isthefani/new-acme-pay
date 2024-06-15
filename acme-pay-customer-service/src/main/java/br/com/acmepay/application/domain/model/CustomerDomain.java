@@ -20,7 +20,6 @@ public class CustomerDomain {
     private LocalDateTime updated_at;
 
     public String create(ICreateCustomer createCustomer) {
-        createCustomer.execute(this);
-        return null;
-    };
+        return createCustomer.execute(this);
+    }
 }
